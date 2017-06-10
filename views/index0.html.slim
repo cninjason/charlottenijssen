@@ -1,0 +1,28 @@
+= title "home | charlottenijssen.com"
+= description "Charlotte Nijssen is a senior product designer"
+
+= body_class "home-page"
+
+== render "sprites/home"
+main.main
+  .centered
+    .content
+      .frieze
+        svg.frieze__image.frieze__image--left
+          use xlink:href="#shiny-bug"
+        == image_tag "images/logo.svg", class: "frieze__image frieze__image--center"
+        svg.frieze__image.frieze__image--right
+          use xlink:href="#shiny-bug"
+      h1.home-title
+        | Charlotte
+        span.home-title__name
+      h2.home-strapline designing &amp; developing since 2010.
+      nav.home-nav
+        a.home-nav-link.home-nav-link--about href="/about"
+          span.home-nav-link__text.home-nav-link__text--about About
+        a.home-nav-link.home-nav-link--portfolio href="/portfolio"
+          span.home-nav-link__text.home-nav-link__text--portfolio Work
+        a.home-nav-link.home-nav-link--recipes href="/recipes.html"
+          span.home-nav-link__text.home-nav-link__text--recipes Recipes
+        a.home-nav-link.home-nav-link--contact href="mailto:charlottenijssen2@gmail.com"
+          span.home-nav-link__text.home-nav-link__text--contact Contact
