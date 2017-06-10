@@ -1,0 +1,27 @@
+nav.nav.grid.centered
+  label.nav-toggle--hidden for="nav__toggle"
+  .nav-logo-wrap
+    a.nav-logo.fancy-link href="/"
+      == image_tag "../images/logo.svg", class: "nav-logo__image"
+  div class=(request.fullpath == "/about" ? 'nav-item--active' : 'nav-item')
+    a.nav-link--about href="/about" class=(request.fullpath == "/about" ? 'nav-link--active' : 'nav-link link')
+      span.nav-link__text.link__text About
+  div class=(request.fullpath == "/portfolio" ? 'nav-item--active' : 'nav-item')
+    a.nav-link--portfolio href="/portfolio" class=(request.fullpath == "/portfolio" ? 'nav-link--active' : 'nav-link link')
+      span.nav-link__text.link__text Work
+  div class=(request.fullpath == "/recipes" ? 'nav-item--active' : 'nav-item')
+    - if request.fullpath.include? "/recipes"
+      a.nav-link--recipes.nav-link--active href="/recipes.html"
+        span.nav-link__text.link__text Recipes
+    - else
+      a.nav-link--recipes.nav-link.link href="/recipes.html"
+        span.nav-link__text.link__text Recipes
+  div class=(request.fullpath == "/music" ? 'nav-item--active' : 'nav-item')
+    a.nav-link--music href="/music" class=(request.fullpath == "/music" ? 'nav-link--active' : 'nav-link link')
+      span.nav-link__text.link__text Music
+  div class=(request.fullpath == "/colours" ? 'nav-item--active' : 'nav-item')
+    a.nav-link--colours href="/colours" class=(request.fullpath == "/colours" ? 'nav-link--active' : 'nav-link link')
+      span.nav-link__text.link__text Colours
+  .nav-item
+    a.nav-link--contact.nav-link.link href="mailto:charlottenijssen2@gmail.com"
+      span.nav-link__text.link__text Contact

@@ -1,0 +1,49 @@
+= title "recipes | charlottenijssen.com"
+= description "A selection of recipes"
+
+main.main
+  .content.main-intro
+    h1 Recipes
+    p A selection of my tried and tested favourites.
+  ul.grid.recipe-grid
+    li.recipe-grid__item.recipe-grid__item--wide
+      a.recipe-link href="recipes/buttermilk-pancakes"
+        picture.recipe-link__image
+          source srcset="images/recipes/buttermilk-pancakes--wide.jpg" media="(min-width: 1000px)"
+          == image_tag "images/recipes/buttermilk-pancakes.jpg", class:"recipe-link__image"
+        span.recipe-link__title Buttermilk pancakes
+    li.recipe-grid__item
+      a.recipe-link href="recipes/lemon-curd"
+        == image_tag "images/recipes/lemon-curd.jpg", class:"recipe-link__image"
+        span.recipe-link__title Lemon curd
+    li.recipe-grid__item
+      a.recipe-link href="recipes/welsh-cakes"
+        == image_tag "images/recipes/welsh-cakes.jpg", class:"recipe-link__image"
+        span.recipe-link__title Welsh cakes
+    li.recipe-grid__item.recipe-grid__item--wide
+      a.recipe-link href="recipes/southern-biscuits"
+        picture.recipe-link__image
+          source srcset="images/recipes/southern-biscuits--wide.jpg" media="(min-width: 1000px)"
+          == image_tag "images/recipes/southern-biscuits.jpg", class:"recipe-link__image"
+        span.recipe-link__title Southern style biscuits
+    li.recipe-grid__item.recipe-grid__item--wide
+      a.recipe-link href="recipes/lime-polenta-cake"
+        picture.recipe-link__image
+          source srcset="images/recipes/lime-polenta-cake--wide.jpg" media="(min-width: 1000px)"
+          == image_tag "images/recipes/lime-polenta-cake.jpg", class:"recipe-link__image"
+        span.recipe-link__title Lime polenta cake
+
+    li.recipe-grid__item
+      a.recipe-link href="recipes/boterkoek"
+        == image_tag "images/recipes/boterkoek.jpg", class:"recipe-link__image"
+      span.recipe-link__title Boterkoek
+    li.recipe-grid__item
+      a.recipe-link href="recipes/raspberry-buttermilk-cakes"
+        == image_tag "images/recipes/raspberry-buttermilk-cakes.jpg", class:"recipe-link__image"
+        span.recipe-link__title Raspberry buttermilk cakes
+    li.recipe-grid__item.recipe-grid__item--wide
+      a.recipe-link href="recipes/bb-pudding"
+        picture.recipe-link__image
+          source srcset="images/recipes/bb-pudding--wide.jpg" media="(min-width: 1000px)"
+          == image_tag "images/recipes/bb-pudding.jpg", class:"recipe-link__image"
+        span.recipe-link__title Savoury bread pudding

@@ -1,0 +1,12 @@
+header.header
+  a.header-logo.fancy-link href="/"
+    == image_tag "../images/logo.svg", class: "header-logo__image"
+  - if request.fullpath.include? "/recipes/"
+    == render "recipes/shared/back-link"
+  input.nav-toggle-input id="nav__toggle" type="checkbox"
+  label.nav-toggle.fancy-link for="nav__toggle"
+    == image_tag "../images/insects/spider.svg", class: "nav-toggle__icon"
+    == image_tag "../images/insects/spider.svg", class: "nav-toggle__icon"
+    == image_tag "../images/insects/spider.svg", class: "nav-toggle__icon"
+  .nav-wrapper.centered
+    == render "shared/nav"
