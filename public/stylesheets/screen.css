@@ -290,7 +290,6 @@ h2 {
 .fancy-block {
   position: relative;
   max-width: 45rem;
-  padding: 2rem 1rem;
   background: #FFF;
 }
 .fancy-block:before, .fancy-block:after {
@@ -965,20 +964,29 @@ h2 {
 }
 @media screen and (min-width: 750px) {
   .profile {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
     margin: 6rem 0 25vh;
   }
 }
 
-.cities__intro {
-  padding: 0 2rem;
+.profile-text {
+  padding: 4rem;
 }
-@media screen and (max-width: 750px) {
-  .cities__intro {
-    padding: 0 1.25rem;
-  }
+
+.profile-portrait {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profile-portrait__image {
+  max-width: 100%;
+  width: 17rem;
+  border-radius: 100%;
+}
+
+.cities-intro {
+  margin-top: 3rem;
+  text-align: center;
 }
 
 .city-wrap {
@@ -1344,7 +1352,6 @@ h2 {
   width: 1000px;
   max-width: 100%;
   margin-bottom: 3rem;
-  padding: 0;
 }
 @media screen and (max-width: 750px) {
   .project {

@@ -8,9 +8,22 @@
     justify-content: center;
   }
   @media screen and (min-width: $break-m) {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
     margin: 6rem 0 25vh;
   }
+}
+
+.profile-text {
+  padding: 4rem;
+}
+
+.profile-portrait {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profile-portrait__image {
+  max-width: 100%;
+  width: 17rem;
+  border-radius: 100%;
 }
