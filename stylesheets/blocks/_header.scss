@@ -1,0 +1,97 @@
+$button-size: 4rem;
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  @media screen and (max-width: $break-s) {
+    padding:1rem;
+  }
+}
+
+.header-logo {
+  width: $button-size;
+  height: $button-size;
+  &:before {
+    background-image: url('../images/ornaments/pink-blob.jpg');
+    width: $button-size;
+    height: $button-size;
+  }
+}
+
+.header-logo__image {
+  display: block;
+  width: 100%;
+  transition: $base-transition;
+  .header-logo:hover & {
+    transform: rotate(-20deg);
+  }
+}
+
+.header-back {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: $button-size;
+}
+
+.header-back__link {
+  display: inline-block;
+}
+
+.nav-toggle-input {
+  @extend .hidden;
+}
+
+.nav-toggle {
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: $button-size;
+  height: $button-size;
+  padding: .75rem;
+  &:before {
+    background-image: url('../images/ornaments/yellow-blob.jpg');
+    width: $button-size;
+    height: $button-size;
+  }
+  .nav-toggle-input:checked ~ & {
+    opacity: 0;
+  }
+  @media screen and (max-width: $break-s) {
+    right: 1rem;
+  }
+}
+
+.nav-toggle--hidden {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-toggle__icon {
+  width: .85rem;
+  transition: $base-transition;
+  &:first-of-type {
+    .nav-toggle:hover & {
+      transform: rotate(90deg);
+    }
+  }
+  &:nth-of-type(2) {
+    left: .5rem;
+    transform: rotate(45deg);
+    .nav-toggle:hover & {
+      transform: rotate(-60deg);
+    }
+  }
+  &:last-of-type {
+    transform: rotate(170deg);
+    .nav-toggle:hover & {
+      transform: rotate(45deg);
+    }
+  }
+}

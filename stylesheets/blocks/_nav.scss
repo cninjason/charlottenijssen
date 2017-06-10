@@ -1,0 +1,119 @@
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: -9999px;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+  .nav-toggle-input:checked ~ & {
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.nav {
+  min-height: 100vh;
+  width: 100%;
+  background: $white;
+  padding: 2rem 0;
+}
+
+.nav-logo-wrap {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo {
+  width: 8rem;
+  &:before {
+    background-image: url('../images/ornaments/pink-blob.jpg');
+    width: 6rem;
+    height: 4rem;
+  }
+}
+
+.nav-logo__image {
+  transition: $base-transition;
+  .nav-logo:hover & {
+    transform: rotate(-20deg);
+  }
+}
+
+.nav-item, .nav-item--active {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 100%;
+  @media screen and (min-width: $break-s) {
+    flex: 0 0 50%;
+  }
+  @media screen and (min-width: $break-m) {
+    flex: 0 0 33.333%;
+  }
+}
+
+.nav-link {
+  font-weight: normal;
+}
+
+.nav-link--active {
+  cursor: default;
+  &:before, &:after {
+    content: url('../images/insects/ant.svg');
+    position: absolute;
+    top: 90%;
+    width: 1.5rem;
+    margin-top: .5rem;
+    transition: $base-transition;
+  }
+  &:before {
+    right: 49%;
+    animation: fussing .9s linear infinite;
+  }
+  &:after {
+    left: 49%;
+    animation: fussingReversed .95s linear infinite;
+  }
+  &:hover {
+    &:before, &:after {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes fussing {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 30deg);
+    transform: rotate3d(0, 0, 1, 30deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes fussingReversed {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg) scaleX(-1);
+    transform: rotate3d(0, 0, 1, 0deg) scaleX(-1);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, -15deg) scaleX(-1);
+    transform: rotate3d(0, 0, 1, -15deg) scaleX(-1);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg) scaleX(-1);
+    transform: rotate3d(0, 0, 1, 0deg) scaleX(-1);
+  }
+}

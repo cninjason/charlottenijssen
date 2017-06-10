@@ -1,0 +1,43 @@
+h1, h2, h3, .title {
+  font-family: $special-font;
+  font-weight: 400;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  @media screen and (min-width: $break-s) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  @media screen and (min-width: $break-s) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+
+  @media screen and (min-width: $break-s) {
+    font-size: 2rem;
+  }
+
+}
+
+.title {
+  margin-bottom: .5rem;
+  font-size: 1.1em;
+  line-height: 1.35;
+  @media screen and (min-width: $break-s) {
+    font-size: 1.3rem;
+  }
+}
+
+.desc {
+  margin-bottom: 1.5rem;
+  line-height: 1.35;
+}

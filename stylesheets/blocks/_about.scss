@@ -1,0 +1,10 @@
+.about-page {
+  background: url(../images/ornaments/pattern.jpg);
+  background-size: 40rem;
+  background-attachment: fixed;
+  .header-logo, .nav-toggle {
+    &:before {
+      content: none;
+    }
+  }
+}

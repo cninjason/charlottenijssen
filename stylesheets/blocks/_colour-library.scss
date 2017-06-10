@@ -1,0 +1,106 @@
+.colour-grid {
+    padding: 0 1rem;
+}
+
+.colour-grid__item {
+  flex: 0 0 50%;
+  padding: 0 .5rem 1rem;
+  text-align: center;
+  opacity: 0;
+  @media screen and (min-width: $break-xs) {
+    padding: 0 1rem 2rem;
+    flex: 0 0 33.333%;
+  }
+  @media screen and (min-width: $break-m) {
+    flex: 0 0 25%;
+  }
+  @media screen and (min-width: $break-xl) {
+    flex: 0 0 16.666%;
+  }
+}
+
+.colour-grid__item--visible {
+  opacity: 1;
+}
+
+.colour {
+  position: relative;
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: $base-transition;
+  color: $white;
+  &:hover {
+    transform: scale(1.02);
+    .colour__info {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: 'Copied!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    opacity: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.colour--dark {
+  color: $base-color;
+}
+
+.colour--copied {
+  &:before {
+    animation: copied 1s ease-in-out ;
+  }
+  &, &:hover {
+    .colour__info {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes copied {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.colour__info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  opacity: 0;
+  transition: $base-transition;
+}
+
+.colour__title {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+.colour__code {
+  text-transform: uppercase;
+}

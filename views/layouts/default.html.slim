@@ -1,0 +1,25 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    title
+      = yield(:title)
+
+    meta name="description" content="#{yield(:description)}"
+
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    link rel="icon" href="/favicon.ico"
+
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+English:400,400i|Cutive+Mono"
+    link rel="stylesheet" href="/stylesheets/screen.css"
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  body class="#{yield(:body_class)}"
+    - unless request.fullpath == "/"
+      == render "shared/header"
+    == yield
+    - unless request.fullpath == "/"
+      == render "shared/footer"
+    == render "shared/scripts"

@@ -1,0 +1,16 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: 15vh;
+  @media screen and (max-width: $break-m) {
+    padding: 0 1.25rem;
+    justify-content: center;
+  }
+  @media screen and (min-width: $break-m) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 6rem 0 25vh;
+  }
+}

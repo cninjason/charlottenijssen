@@ -1,0 +1,198 @@
+.home-page {
+  @media screen and (max-width: $break-s) {
+    background: url(../images/ornaments/pink-blob.jpg) 3rem center no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
+  }
+}
+
+.home-title {
+  margin-bottom: .75rem;
+  @media screen and (max-width: $break-s) {
+    font-size: 1.5em;
+  }
+}
+
+.home-title__name {
+  display: inline-block;
+  position: relative;
+  margin-left: .25rem;
+
+  &:before {
+    content: "Nijssen";
+    display: inline-block;
+    width: 3em;
+    text-align: left;
+    animation: nameChangeBack .9s;
+    animation-fill-mode: forwards;
+  }
+  @media screen and (min-width: $break-m) {
+    margin-left: .75rem;
+    &:hover {
+      &:before {
+        animation: nameChange .7s;
+        animation-fill-mode: forwards;
+        animation-delay: .2s;
+      }
+    }
+  }
+}
+
+@keyframes nameChange {
+  20% {
+    opacity: 0;
+  }
+  60% {
+    content: 'Nason';
+    font-style: italic;
+  }
+  100% {
+    content: 'Nason';
+    font-style: italic;
+    opacity: 1;
+  }
+}
+
+@keyframes nameChangeBack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-strapline {
+  font-size: 1em;
+  margin-bottom: 2rem;
+  @media screen and (max-width: $break-s) {
+    padding: 0 1rem;
+  }
+}
+
+.home-nav {
+  @media screen and (max-width: $break-m) {
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.home-nav-link {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  @media screen and (max-width: $break-m) , (max-height: $break-s) {
+    flex: 0 0 50%;
+    font-size: .9em;
+    padding: 1.5rem .75rem;
+  }
+
+  @media screen and (min-width: $break-m) and (min-height: $break-s)  {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: $break-m) and (min-height: $break-s) {
+
+  $nav-position: 2rem;
+
+  .home-nav-link__text {
+    display: block;
+    width: 5rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 28rem;
+      height: 18rem;
+      max-height: 25vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0;
+      transition: $base-transition;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+  }
+
+  .home-nav-link--about {
+    top: $nav-position;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-nav-link__text--about {
+    transform: rotate(180deg);
+    &:before {
+      background-image: url(../images/ornaments/blue-blob.jpg);
+    }
+  }
+
+  .home-nav-link--portfolio {
+    top: 50%;
+    left: $nav-position;
+    transform: translateY(-50%);
+  }
+
+  .home-nav-link__text--portfolio {
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    &:before {
+      background-image: url(../images/ornaments/orange-blob.jpg);
+      transform: translate(-50%, -50%) scale(-1);
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(-1.05);
+      }
+    }
+  }
+
+  .home-nav-link--recipes {
+    top: 50%;
+    right: $nav-position;
+    transform: translateY(-50%);
+  }
+
+  .home-nav-link__text--recipes {
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+    &:before {
+      background-image: url(../images/ornaments/green-blob.jpg);
+      transform: translate(-50%, -50%) scale(-1);
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(-1.05);
+      }
+    }
+  }
+
+  .home-nav-link--contact {
+    left: 50%;
+    bottom: $nav-position;
+    transform: translateX(-50%);
+  }
+
+  .home-nav-link__text--contact {
+    &:before {
+      background-image: url(../images/ornaments/yellow-blob.jpg);
+    }
+  }
+
+}

@@ -1,0 +1,116 @@
+
+.cities__intro {
+  padding: 0 2rem;
+  @media screen and (max-width: $break-m) {
+    padding: 0 1.25rem;
+  }
+}
+
+.city__input {
+  @extend .hidden;
+}
+
+.city-wrap {
+  display: block;
+}
+
+.city {
+  width: 100%;
+  padding: 4rem 0;
+  transition: .5s ease-in;
+  cursor: pointer;
+  font-family: $special-font;
+}
+
+.city--london {
+  position: relative;
+}
+
+.city--berlin {
+  position: absolute;
+  transform: translateY(-80%);
+  .city__input:checked ~ .city-wrap & {
+    position: relative;
+    transform: translateY(0);
+  }
+  @media screen and (max-width: $break-s) {
+    transform: translateY(-100%);
+  }
+}
+
+.city-details {
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  width: 14rem;
+  height: 14rem;
+  border-radius: 100%;
+  z-index: -1;
+  transition: $base-transition;
+  padding: 3rem;
+  text-align: center;
+  background: $base-color;
+  color: $white;
+  .city__input:checked ~ .city-wrap & {
+    opacity: 1;
+    transform: translate(-50%, -40%);
+  }
+  @media screen and (max-width: $break-m) {
+    width: 12rem;
+    height: 12rem;
+    padding: 2rem;
+  }
+}
+.city-details__name {
+  font-size: 2em;
+  margin-bottom: .5rem;
+}
+
+.city-details__time {
+  font-size: 1.5em;
+}
+
+.city__river-name {
+  position: absolute;
+  font-style: italic;
+}
+
+.city__river-name--thames {
+  top: 40%;
+  padding-left: 2.25rem;
+  transform: rotate(5deg);
+  @media screen and (max-width: $break-s) {
+    padding-left: .6rem;
+    transform: rotate(10deg);
+  }
+}
+
+.city__river-name--spree {
+  top: 11%;
+  padding-left: 2rem;
+  transform: rotate(-5deg);
+  @media screen and (max-width: $break-s) {
+    top: 18%;
+    padding-left: 1rem;
+    transform: rotate(14deg);
+  }
+}
+
+.city__river {
+  fill: $base-color;
+  transition: $base-transition;
+  .city__input:checked ~ .city-wrap & {
+    fill: $blue;
+  }
+}
+
+.city__river--thames, .city__river--spree {
+  .city:hover &, .city__input:checked ~ .city-wrap & {
+    fill: $blue;
+  }
+}

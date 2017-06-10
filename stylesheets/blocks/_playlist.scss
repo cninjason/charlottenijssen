@@ -1,0 +1,86 @@
+$focus-color: $orange;
+$jazz-color: $pink;
+$classical-color: $green;
+$hiphop-color: $yellow;
+$fresh-color: $blue;
+
+.playlist {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background: url('../images/ornaments/waves.svg');
+  background-size: 3rem;
+  background-attachment: fixed;
+  @media screen and (min-width: $break-m) {
+    display: flex;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.playlist-art {
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: no-repeat center;
+  .playlist--focus & {
+    background-image: url('../images/ornaments/green-triangle.png');
+  }
+  .playlist--jazz & {
+    background-image: url('../images/ornaments/blue-triangle.png');
+  }
+  .playlist--classical & {
+    background-image: url('../images/ornaments/pink-triangle.png');
+  }
+  .playlist--hiphop & {
+    background-image: url('../images/ornaments/orange-triangle.png');
+  }
+  .playlist--fresh & {
+    background-image: url('../images/ornaments/yellow-triangle.png');
+  }
+  @media screen and (max-width: $break-m) {
+    justify-content: center;
+    background-position: center;
+    background-size: 10rem;
+  }
+}
+
+.playlist-art__image {
+  width: 8rem;
+  max-width: 90%;
+  @media screen and (min-width: $break-m) {
+    width: 20rem;
+  }
+}
+
+.playlist-art--jazz__image, .playlist-art--classical__image, .playlist-art--fresh__image {
+  width: 6rem;
+  @media screen and (min-width: $break-m) {
+    width: 12rem;
+  }
+}
+
+.playlist-content {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.playlist-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  @media screen and (min-width: $break-m) {
+    font-size: 3.5rem;
+  }
+}
+
+.playlist-details {
+  margin-bottom: 1rem;
+}

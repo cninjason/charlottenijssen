@@ -1,0 +1,7 @@
+.main-intro {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  @media screen and (min-width: $break-m) {
+    margin-bottom: 5rem;
+  }
+}

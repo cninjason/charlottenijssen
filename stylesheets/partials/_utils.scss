@@ -1,0 +1,53 @@
+$break-xl: 1200px;
+$break-l: 1000px;
+$break-m: 750px;
+$break-s: 600px;
+$break-xs: 500px;
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+$base-transition: .25s ease-in;
+
+@keyframes rainbow {
+  0% {
+    color: $base-color;
+    fill: $base-color;
+  }
+
+  17% {
+    color: $yellow;
+    fill: $yellow;
+  }
+
+  33% {
+    color: $orange;
+    fill: $orange;
+  }
+
+  50% {
+    color: $pink;
+    fill: $pink;
+  }
+
+  67% {
+    color: $green;
+    fill: $green;
+  }
+
+  80% {
+    color: $blue;
+    fill: $blue;
+  }
+
+  100% {
+    color: $base-color;
+    fill: $base-color;
+  }
+}

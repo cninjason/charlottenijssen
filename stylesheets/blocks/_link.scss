@@ -1,0 +1,76 @@
+.link {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  padding-top: .3em;
+  word-break: break-word;
+  @media screen and (min-width: $break-m) {
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      margin-top: .15rem;
+      background: url(../images/ornaments/pink-bar.jpg);
+      background-size: contain;
+      height: 1.2em;
+      width: 0;
+      border-radius: 1px;
+      opacity: 0;
+      transition: $base-transition;
+    }
+    &:hover {
+      &:after {
+        width: calc(100% + .25rem);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-m) {
+  .link__text {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+  }
+}
+
+@mixin fancy-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: no-repeat center;
+    background-size: contain;
+    display: block;
+    transition: $base-transition;
+    opacity: 0;
+  }
+  &:hover:before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  img {
+    position: relative;
+  }
+}
+
+.fancy-link {
+  @include fancy-link;
+}
+
+.button-link {
+  text-transform: uppercase;
+  font-size: .9rem;
+}

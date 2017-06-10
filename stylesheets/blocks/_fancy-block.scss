@@ -1,0 +1,38 @@
+.fancy-block {
+  position: relative;
+  max-width: 45rem;
+  padding: 2rem 1rem;
+  background: $white;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../images/ornaments/corner-dark.svg') no-repeat;
+    background-size: contain;
+  }
+  &:before {
+    top: -.5rem;
+    left: -.5rem;
+    transform: rotate(180deg);
+  }
+  &:after {
+    bottom: -.5rem;
+    right: -.5rem;
+  }
+  @media screen and (min-width: $break-m) {
+    &:before, &:after {
+      width: 3rem;
+      height: 3rem;
+    }
+    &:before {
+      top: -1rem;
+      left: -1rem;
+    }
+    &:after {
+      bottom: -1rem;
+      right: -1rem;
+    }
+  }
+}

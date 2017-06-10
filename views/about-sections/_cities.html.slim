@@ -1,0 +1,27 @@
+.cities
+  .cities__intro
+    .content.main-intro.fancy-block
+      h2 Home is where my rolling pin is.
+      p So far, my rolling pin has been here:
+  input.city__input type="checkbox" id="city-toggle"
+  label.city-wrap for="city-toggle"
+    .city.city--london
+      span.city__river-name.city__river-name--thames
+        | Thames
+      svg.city__river.city__river--thames viewBox="0 0 1000 260.7"
+        use xlink:href="#thames"
+      dl.city-details
+        dt.city-details__name
+          | London
+        dd.city-details__time
+          | 2009 - 2016
+    .city.city--berlin
+      span.city__river-name.city__river-name--spree
+        | Spree
+      svg.city__river.city__river--spree viewBox="0 0 1000 269.4"
+        use xlink:href="#spree"
+      dl.city-details
+        dt.city-details__name
+          | Berlin
+        dd.city-details__time
+          | 2016 - ...

@@ -1,0 +1,1 @@
+Zepto(function(a){a(".colour-grid__item").each(function(b){var c=a(this);setTimeout(function(){c.addClass("colour-grid__item--visible")},200*b)}),new Clipboard(".colour",{text:function(b){return a(b).find(".colour__code").text()}}).on("success",function(b){a(b.trigger).addClass("colour--copied"),setTimeout(function(){a(b.trigger).removeClass("colour--copied")},2e3)})});
