@@ -970,7 +970,17 @@ h2 {
 }
 
 .profile-text {
-  padding: 4rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .profile-text {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .profile-text {
+    padding: 4rem;
+  }
 }
 
 .profile-portrait {
@@ -979,9 +989,15 @@ h2 {
 }
 
 .profile-portrait__image {
+  margin: 0 2rem;
   max-width: 100%;
-  width: 17rem;
+  width: 8rem;
   border-radius: 100%;
+}
+@media screen and (min-width: 600px) {
+  .profile-portrait__image {
+    width: 15rem;
+  }
 }
 
 .cities-intro {

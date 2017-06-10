@@ -14,7 +14,13 @@
 }
 
 .profile-text {
-  padding: 4rem;
+  padding: 1rem;
+  @media screen and (min-width: $break-m) {
+    padding: 2rem;
+  }
+  @media screen and (min-width: $break-l) {
+    padding: 4rem;
+  }
 }
 
 .profile-portrait {
@@ -23,7 +29,11 @@
 }
 
 .profile-portrait__image {
+  margin: 0 2rem;
   max-width: 100%;
-  width: 17rem;
+  width: 8rem;
   border-radius: 100%;
+  @media screen and (min-width: $break-s) {
+    width: 15rem;
+  }
 }

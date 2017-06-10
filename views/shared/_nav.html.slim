@@ -6,8 +6,8 @@ nav.nav.grid.centered
   div class=(request.fullpath == "/about" ? 'nav-item--active' : 'nav-item')
     a.nav-link--about href="/about" class=(request.fullpath == "/about" ? 'nav-link--active' : 'nav-link link')
       span.nav-link__text.link__text About
-  div class=(request.fullpath == "/portfolio" ? 'nav-item--active' : 'nav-item')
-    a.nav-link--portfolio href="/portfolio" class=(request.fullpath == "/portfolio" ? 'nav-link--active' : 'nav-link link')
+  div class=(request.fullpath == "/work" ? 'nav-item--active' : 'nav-item')
+    a.nav-link--portfolio href="/work" class=(request.fullpath == "/work" ? 'nav-link--active' : 'nav-link link')
       span.nav-link__text.link__text Work
   div class=(request.fullpath == "/recipes" ? 'nav-item--active' : 'nav-item')
     - if request.fullpath.include? "/recipes"
