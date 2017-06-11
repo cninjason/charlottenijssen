@@ -1281,17 +1281,18 @@ h2 {
 
 .playlist {
   text-align: center;
+  max-width: 50rem;
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   background: url("../images/ornaments/waves.svg");
-  background-size: 3rem;
+  background-size: 4rem;
   background-attachment: fixed;
 }
 @media screen and (min-width: 750px) {
   .playlist {
     display: flex;
     padding: 4rem 2rem;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
   }
   .playlist:nth-of-type(even) {
     flex-direction: row-reverse;
@@ -1305,6 +1306,7 @@ h2 {
   align-items: center;
   padding: 2rem;
   background: no-repeat center;
+  background-size: 14rem;
 }
 .playlist--focus .playlist-art {
   background-image: url("../images/ornaments/green-triangle.png");
@@ -1325,7 +1327,7 @@ h2 {
   .playlist-art {
     justify-content: center;
     background-position: center;
-    background-size: 10rem;
+    background-size: 8rem;
   }
 }
 
@@ -1335,7 +1337,7 @@ h2 {
 }
 @media screen and (min-width: 750px) {
   .playlist-art__image {
-    width: 20rem;
+    width: 16rem;
   }
 }
 
@@ -1344,7 +1346,7 @@ h2 {
 }
 @media screen and (min-width: 750px) {
   .playlist-art--jazz__image, .playlist-art--classical__image, .playlist-art--fresh__image {
-    width: 12rem;
+    width: 10rem;
   }
 }
 

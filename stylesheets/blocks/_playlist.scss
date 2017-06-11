@@ -6,15 +6,16 @@ $fresh-color: $blue;
 
 .playlist {
   text-align: center;
+  max-width: 50rem;
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   background: url('../images/ornaments/waves.svg');
-  background-size: 3rem;
+  background-size: 4rem;
   background-attachment: fixed;
   @media screen and (min-width: $break-m) {
     display: flex;
     padding: 4rem 2rem;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
     &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
@@ -28,6 +29,7 @@ $fresh-color: $blue;
   align-items: center;
   padding: 2rem;
   background: no-repeat center;
+  background-size: 14rem;
   .playlist--focus & {
     background-image: url('../images/ornaments/green-triangle.png');
   }
@@ -46,7 +48,7 @@ $fresh-color: $blue;
   @media screen and (max-width: $break-m) {
     justify-content: center;
     background-position: center;
-    background-size: 10rem;
+    background-size: 8rem;
   }
 }
 
@@ -54,14 +56,14 @@ $fresh-color: $blue;
   width: 8rem;
   max-width: 90%;
   @media screen and (min-width: $break-m) {
-    width: 20rem;
+    width: 16rem;
   }
 }
 
 .playlist-art--jazz__image, .playlist-art--classical__image, .playlist-art--fresh__image {
   width: 6rem;
   @media screen and (min-width: $break-m) {
-    width: 12rem;
+    width: 10rem;
   }
 }
 
