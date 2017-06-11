@@ -28,11 +28,14 @@
 }
 
 .nav-logo {
-  width: 8rem;
+  width: 6rem;
   &:before {
     background-image: url('../images/ornaments/pink-blob.jpg');
     width: 6rem;
     height: 4rem;
+  }
+  @media screen and (min-width: $break-m) {
+    width: 8rem;
   }
 }
 

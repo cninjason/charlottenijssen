@@ -448,12 +448,17 @@ h2 {
 }
 
 .nav-logo {
-  width: 8rem;
+  width: 6rem;
 }
 .nav-logo:before {
   background-image: url("../images/ornaments/pink-blob.jpg");
   width: 6rem;
   height: 4rem;
+}
+@media screen and (min-width: 750px) {
+  .nav-logo {
+    width: 8rem;
+  }
 }
 
 .nav-logo__image {
