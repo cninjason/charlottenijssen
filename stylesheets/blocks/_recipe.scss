@@ -19,7 +19,7 @@
   margin-bottom: 1rem;
 }
 
-.recipe-info {
+.recipe-info-bar {
   margin-bottom: 1rem;
   border: solid $yellow;
   border-width: 1px 0;
@@ -34,8 +34,22 @@
   }
 }
 
-.recipe-info__item {
+.recipe-info {
   padding: .75rem .5rem;
+}
+
+.recipe-info__title, .recipe-info__value {
+  display: inline-block;
+}
+
+.recipe-info__title {
+  @media screen and (max-width: $break-xs) {
+    width: 6.25rem;
+  }
+}
+
+.recipe-info__value {
+  font-weight: 700;
 }
 
 .recipe-ingredients {
