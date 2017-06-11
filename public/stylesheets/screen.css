@@ -1237,7 +1237,7 @@ h2 {
 }
 
 .recipe-info__item {
-  padding: .5rem;
+  padding: .75rem .5rem;
 }
 
 .recipe-ingredients {
