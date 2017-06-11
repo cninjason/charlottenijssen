@@ -10,6 +10,24 @@ main.main
       a.link href="mailto:charlottenijssen2@gmail.com"
         span.link__text get in touch!
   ul.playlists.content
+    li.playlist.playlist--fresh.fancy-block
+      .playlist-art
+        == image_tag "images/insects/fresh-bug.svg", class:"playlist-art__image playlist-art--fresh__image"
+      .playlist-content
+        h2.playlist-title
+          | Fresh Folks
+        dl.playlist-details
+          dt.playlist-details__title.title In three words
+          dd.playlist-details__desc.desc Young, vocal, groovy
+          dt.playlist-details__title.title Occasion
+          dd.playlist-details__desc.desc On a walk, at home, early morning flight
+          dt.playlist-details__title.title Artists
+          dd.playlist-details__desc.desc Misch, Rakei, Carner, Asgeir
+        .playlist-link-wrap
+          |[
+          a.link.playlist-link.button-link href="https://open.spotify.com/user/cnijssen/playlist/1AKyxAhuJSmS58drktbTha"
+            span.link__text Listen
+          |]
     li.playlist.playlist--classical.fancy-block
       .playlist-art
         == image_tag "images/insects/classical-bug.svg", class:"playlist-art__image playlist-art--classical__image"
@@ -80,23 +98,5 @@ main.main
         .playlist-link-wrap
           |[
           a.link.playlist-link.button-link href="https://open.spotify.com/user/cnijssen/playlist/2gKYgReoLuKIrhUFIL0Ugy"
-            span.link__text Listen
-          |]
-    li.playlist.playlist--fresh.fancy-block
-      .playlist-art
-        == image_tag "images/insects/fresh-bug.svg", class:"playlist-art__image playlist-art--fresh__image"
-      .playlist-content
-        h2.playlist-title
-          | Fresh Folks
-        dl.playlist-details
-          dt.playlist-details__title.title In three words
-          dd.playlist-details__desc.desc Young, vocal, groovy
-          dt.playlist-details__title.title Occasion
-          dd.playlist-details__desc.desc On a walk, at home, early morning flight
-          dt.playlist-details__title.title Artists
-          dd.playlist-details__desc.desc Misch, Rakei, Carner, Asgeir
-        .playlist-link-wrap
-          |[
-          a.link.playlist-link.button-link href="https://open.spotify.com/user/cnijssen/playlist/1AKyxAhuJSmS58drktbTha"
             span.link__text Listen
           |]
