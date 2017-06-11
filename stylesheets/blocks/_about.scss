@@ -1,10 +1,13 @@
 .about-page {
   background: url(../images/ornaments/pattern.jpg);
-  background-size: 40rem;
+  background-size: 20rem;
   background-attachment: fixed;
   .header-logo, .nav-toggle {
     &:before {
       content: none;
     }
+  }
+  @media screen and (min-width: $break-m) {
+    background-size: 40rem;
   }
 }

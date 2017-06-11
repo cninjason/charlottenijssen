@@ -29,11 +29,12 @@
 }
 
 .profile-portrait__image {
-  margin: 0 2rem;
+  margin: 0 1rem;
   max-width: 100%;
   width: 8rem;
   border-radius: 100%;
   @media screen and (min-width: $break-s) {
+    margin: 0 2rem;
     width: 15rem;
   }
 }

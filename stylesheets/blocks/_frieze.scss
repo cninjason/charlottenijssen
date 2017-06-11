@@ -7,10 +7,12 @@
 
 .frieze__image {
   width: 2rem;
+  height: 3rem;
   transition: $base-transition;
   fill: $base-color;
   @media screen and (min-width: $break-s) {
     width: 4rem;
+    height: 6rem;
   }
   &:hover {
     animation: rainbow 1s linear infinite;
@@ -23,6 +25,7 @@
 
 .frieze__image--center {
   width: 6rem;
+  height: 9rem;
   margin: 0 1rem;
   &:hover {
     animation-duration: 1s;
