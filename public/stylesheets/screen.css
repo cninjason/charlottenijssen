@@ -1219,16 +1219,16 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.recipe-info {
+.recipe-info-bar {
   margin-bottom: 1rem;
   border: solid #fcbe3c;
   border-width: 1px 0;
 }
-.recipe-info strong {
+.recipe-info-bar strong {
   margin-left: .25rem;
 }
 @media screen and (min-width: 500px) {
-  .recipe-info {
+  .recipe-info-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1236,8 +1236,22 @@ h2 {
   }
 }
 
-.recipe-info__item {
+.recipe-info {
   padding: .75rem .5rem;
+}
+
+.recipe-info__title, .recipe-info__value {
+  display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+  .recipe-info__title {
+    width: 6.25rem;
+  }
+}
+
+.recipe-info__value {
+  font-weight: 700;
 }
 
 .recipe-ingredients {
